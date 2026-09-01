@@ -33,12 +33,9 @@ Logout
     Click Element    ${link_Deconnexion}
     Close Browser
 
-
- 
-    
-
-
-
+Ajout K7
+    Click Element    ${link_Deconnexion}
+    Close Browser
 
 
 creer champ personaliser 

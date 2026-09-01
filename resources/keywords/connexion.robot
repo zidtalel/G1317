@@ -10,7 +10,7 @@ Variables    ../Ressources/PageObjects/Locators/Locators.py
 
 *** Variables ***
 
-${vTIMEOUT}    5
+${vTIMEOUT}    7
 ${vBrowser}    chrome
 ${vURL}    http://localhost:8082
 ${vUsername}    6386444

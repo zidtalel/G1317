@@ -1,4 +1,4 @@
-# Options de disposition du tableau de bord
+# Changer disposition Elements
 img_RoueDentee = "//div[@id='HEADER_CUSTOMIZE_USER_DASHBOARD']/img"
 btn_ChangerDisposition = "//*[@id='template_x002e_customise-layout_x002e_customise-user-dashboard_x0023_default-change-button-button']"
 btn_Mode = "//button[@id='template_x002e_customise-layout_x002e_customise-user-dashboard_x0023_default-select-button-dashboard"

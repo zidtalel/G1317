@@ -1,3 +1,4 @@
+# Logout Elements
 link_HeaderUserMenu = "id=HEADER_USER_MENU_POPUP_text"
 link_HeaderDeconnexion = "id=HEADER_USER_MENU_LOGOUT_text"
 

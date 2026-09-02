@@ -1,4 +1,4 @@
-# Les localisateurs
+# Main menu Elements
 link_MenuOption = "//span[@id='HEADER_"
 
 Main menu

@@ -1,4 +1,4 @@
-# Administration des modèles
+# Menu Actions Elements
 menu_Actions1 = "//td[contains(@class,'nameColumn')]//span[text()='"
 menu_Actions2 ="']/ancestor::tr/td[contains(@class,'actionsColumn')]//span[text()='Actions']"
 menu_Action_Option1 = "//div[@role='region']//img[@title='"

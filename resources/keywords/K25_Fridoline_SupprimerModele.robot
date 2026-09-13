@@ -10,7 +10,7 @@ Supprimer un modele
     # vModele est le nom du modèle.
     # vOptionSuppression est l'option à choisir pour la suppression du modèle.
     # Il fait appel au keyword Menu Action dont le rôle est d'afficher les differentes Actions d'un modèle.
-    # Bonjour les amis
+    
     # la seule valeur possible pour ce mot clé est Supprimer
     [Arguments]    ${vNomModele}    ${vOptionSuppression}    
     Go To    ${vURL}/share/page/console/admin-console/custom-model-manager

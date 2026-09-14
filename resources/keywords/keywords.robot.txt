@@ -1,0 +1,104 @@
+#!/bin/bash
+
+###############################################
+# Programme : Calcul de formes géométriques
+# Objectif  : Saisir les dimensions, calculer
+#             la surface et le périmètre
+#             des formes : carré, rectangle,
+#             cercle et triangle rectangle.
+###############################################
+
+echo "===== Calcul des formes géométriques ====="
+echo "1 - Carré"
+echo "2 - Rectangle"
+echo "3 - Cercle"
+echo "4 - Triangle rectangle"
+echo "-------------------------------------------"
+read -p "Choisissez une forme (1-4) : " choix
+
+
+###############################################
+#        TRAITEMENT SELON LE CHOIX
+###############################################
+
+case $choix in
+
+    #################################################
+    #                     CARRE
+    #################################################
+    1)
+        read -p "Entrez la longueur du côté : " cote
+
+        # Surface : côté²
+        surface=$(echo "$cote * $cote" | bc -l)
+
+        # Périmètre : 4 × côté
+        perimetre=$(echo "4 * $cote" | bc -l)
+
+        echo "Surface du carré : $surface"
+        echo "Périmètre du carré : $perimetre"
+        ;;
+
+    #################################################
+    #                    RECTANGLE
+    #################################################
+    2)
+        read -p "Entrez la longueur : " longueur
+        read -p "Entrez la largeur : " largeur
+
+        # Surface : longueur × largeur
+        surface=$(echo "$longueur * $largeur" | bc -l)
+
+        # Périmètre : 2 × (L + l)
+        perimetre=$(echo "2 * ($longueur + $largeur)" | bc -l)
+
+        echo "Surface du rectangle : $surface"
+        echo "Périmètre du rectangle : $perimetre"
+        ;;
+
+    #################################################
+    #                     CERCLE
+    #################################################
+    3)
+        read -p "Entrez le rayon : " rayon
+
+        # Surface : π × r²
+        surface=$(echo "3.1416 * $rayon * $rayon" | bc -l)
+
+        # Périmètre (circonférence) : 2 × π × r
+        perimetre=$(echo "2 * 3.1416 * $rayon" | bc -l)
+
+        echo "Surface du cercle : $surface"
+        echo "Périmètre du cercle : $perimetre"
+        ;;
+
+    #################################################
+    #             TRIANGLE RECTANGLE
+    #################################################
+    4)
+        read -p "Entrez la base : " base
+        read -p "Entrez la hauteur : " hauteur
+
+        # Surface : (base × hauteur) / 2
+        surface=$(echo "$base * $hauteur / 2" | bc -l)
+
+        # Hypoténuse : sqrt(base² + hauteur²)
+        hyp=$(echo "sqrt($base*$base + $hauteur*$hauteur)" | bc -l)
+
+        # Périmètre : base + hauteur + hypoténuse
+        perimetre=$(echo "$base + $hauteur + $hyp" | bc -l)
+
+        echo "Surface du triangle rectangle : $surface"
+        echo "Périmètre du triangle rectangle : $perimetre"
+        ;;
+
+    #################################################
+    #        CHOIX INVALIDE
+    #################################################
+    *)
+        echo "Erreur : choix invalide."
+        ;;
+esac
+
+echo "-------------------------------------------"
+echo "Fin du programme."

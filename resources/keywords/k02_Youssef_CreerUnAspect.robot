@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *** Settings ***
 Documentation    Fichier contenant le mot-clé et les locateurs pour la création d'un aspect dans un modèle.
 Library          SeleniumLibrary
@@ -20,6 +21,17 @@ ${txt_Aspect_Name}              name=name
 ${txt_Aspect_Display_Label}     name=title
 ${txt_Aspect_Description}       xpath=(//textarea)[last()]
 ${btn_Aspect_Create}            xpath=//*[normalize-space(.)='Create' or normalize-space(.)='Créer']
+=======
+
+# --- Locateurs pour le module de création d'aspect ---
+link_Modele1=             " //td[contains(@class,'nameColumn')]//span[normalize-space(.)='"
+link_Modele2=               " ']"
+btn_Modele_Creer_Aspect=    " xpath=//*[normalize-space(.)='Create Aspect' or normalize-space(.)='Créer un aspect']"
+txt_Aspect_Name=              "name=name"
+txt_Aspect_Display_Label=     "name=title"
+txt_Aspect_Description=       "xpath=(//textarea)[last()]"
+btn_Aspect_Create=           "xpath=//*[normalize-space(.)='Create' or normalize-space(.)='Créer']"
+>>>>>>> ca2f374b161415895f67e4bd3694a76202dc5e47
 
 
 *** Keywords ***

@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-*** Settings ***
-Documentation    Fichier contenant le mot-clé et les locateurs pour la création d'un aspect dans un modèle.
-Library          SeleniumLibrary
-
-
-*** Variables ***
-# --- Configuration générale ---
-${vURL}                         http://localhost:8084/share/page/
-${vBrowser}                     chrome
-${vUsername}                    admin
-${vPassword}                    admin
-${vK02Timeout}                  10s
-${vK02ModelManagerURL}          ${vURL}console/admin-console/custom-model-manager
-
-# --- Locateurs pour le module de création d'aspect ---
-${link_Modele1}                 //td[contains(@class,'nameColumn')]//span[normalize-space(.)='
-${link_Modele2}                 ']
-${btn_Modele_Creer_Aspect}      xpath=//*[normalize-space(.)='Create Aspect' or normalize-space(.)='Créer un aspect']
-${txt_Aspect_Name}              name=name
-${txt_Aspect_Display_Label}     name=title
-${txt_Aspect_Description}       xpath=(//textarea)[last()]
-${btn_Aspect_Create}            xpath=//*[normalize-space(.)='Create' or normalize-space(.)='Créer']
-=======
 
 # --- Locateurs pour le module de création d'aspect ---
 link_Modele1=             " //td[contains(@class,'nameColumn')]//span[normalize-space(.)='"
@@ -31,7 +7,6 @@ txt_Aspect_Name=              "name=name"
 txt_Aspect_Display_Label=     "name=title"
 txt_Aspect_Description=       "xpath=(//textarea)[last()]"
 btn_Aspect_Create=           "xpath=//*[normalize-space(.)='Create' or normalize-space(.)='Créer']"
->>>>>>> ca2f374b161415895f67e4bd3694a76202dc5e47
 
 
 *** Keywords ***

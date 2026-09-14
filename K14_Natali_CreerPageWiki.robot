@@ -23,7 +23,6 @@ LNK_SITE_EN_MIS_SITIOS_2 = ""
 
 
 
-
 K14: Créer une page wiki
     [Arguments]    ${site_name}    ${vTitre}    ${vTexte}
     [Documentation]    Crea una página wiki de forma limpia, corta e independiente.

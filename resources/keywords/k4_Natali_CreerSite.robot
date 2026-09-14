@@ -1,5 +1,5 @@
 
-
+###
 # ==================== NAVIGATION DASHBOARD ====================
 NAV_BAR_COMPONENTS = "id=HEADER_NAVIGATION_MENU_BAR"
 LNK_DASHBOARD_WIKI = "id=HEADER_SITE_WIKI-PAGE_text"
@@ -18,6 +18,7 @@ TXT_SITE_TITLE = "xpath=//div[@id='CREATE_SITE_DIALOG']//input[@name='title']"
 TXT_SITE_SHORTNAME = "xpath=//div[@id='CREATE_SITE_DIALOG']//input[@name='shortName']"
 TXT_SITE_DESCRIPTION = "xpath=//div[@id='CREATE_SITE_DIALOG']//textarea[@name='description']"
 BTN_SUBMIT_SITE = "xpath=//div[@id='CREATE_SITE_DIALOG']//*[self::button or self::input or self::span][normalize-space()='Create' or normalize-space()='Créer' or @value='Create' or @value='Créer']"
+
 
 
 

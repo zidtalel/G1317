@@ -19,6 +19,12 @@ TXT_SITE_SHORTNAME = "xpath=//div[@id='CREATE_SITE_DIALOG']//input[@name='shortN
 TXT_SITE_DESCRIPTION = "xpath=//div[@id='CREATE_SITE_DIALOG']//textarea[@name='description']"
 BTN_SUBMIT_SITE = "xpath=//div[@id='CREATE_SITE_DIALOG']//*[self::button or self::input or self::span][normalize-space()='Create' or normalize-space()='Créer' or @value='Create' or @value='Créer']"
 
+# Radio de visibilidad del sitio. Valores validos: PUBLIC, MODERATED, PRIVATE
+RADIO_VISIBILITY_1 = "xpath=//input[@value='"
+RADIO_VISIBILITY_2 = "']/ancestor::div[contains(@class, 'dijitRadio')]"
+
+
+
 
 
 

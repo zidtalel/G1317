@@ -2,19 +2,19 @@
 
 # Locators
 
-# Bouton "Créer..." de la barre d'outils de "Mes fichiers".
-${btn_CreerContenu}    id=template_x002e_documentlist_v2_x002e_myfiles_x0023_default-createContent-button-button
+# Bouton "Créer..." de la barre d'outils de "Fichiers partagés".
+${btn_CreerContenu}    id=template_x002e_documentlist_v2_x002e_sharedfiles_x0023_default-createContent-button-button
 
 # Option "Dossier" du menu déroulant "Créer...".
 ${link_CreerDossier}    //span[contains(@class,'folder-file')]
 
 # Champs du formulaire de création du dossier (popup "Créer un dossier").
-${txt_NomDossier}           id=template_x002e_documentlist_v2_x002e_myfiles_x0023_default-createFolder_prop_cm_name
-${txt_TitreDossier}         id=template_x002e_documentlist_v2_x002e_myfiles_x0023_default-createFolder_prop_cm_title
-${txt_DescriptionDossier}   id=template_x002e_documentlist_v2_x002e_myfiles_x0023_default-createFolder_prop_cm_description
+${txt_NomDossier}           id=template_x002e_documentlist_v2_x002e_sharedfiles_x0023_default-createFolder_prop_cm_name
+${txt_TitreDossier}         id=template_x002e_documentlist_v2_x002e_sharedfiles_x0023_default-createFolder_prop_cm_title
+${txt_DescriptionDossier}   id=template_x002e_documentlist_v2_x002e_sharedfiles_x0023_default-createFolder_prop_cm_description
 
 # Bouton "Enregistrer" du formulaire de création.
-${btn_ValiderCreationDossier}    id=template_x002e_documentlist_v2_x002e_myfiles_x0023_default-createFolder-form-submit-button
+${btn_ValiderCreationDossier}    id=template_x002e_documentlist_v2_x002e_sharedfiles_x0023_default-createFolder-form-submit-button
 
 # Locator de vérification du dossier créé (basé sur le nom fourni).
 ${lien_DossierCree1}    //a[normalize-space()='
@@ -24,7 +24,7 @@ ${lien_DossierCree2}    ']
 *** Keywords ***
 
 Créer un dossier
-    [Documentation]    Crée un nouveau dossier dans "Mes fichiers" d'Alfresco Share.
+    [Documentation]    Crée un nouveau dossier dans "Fichiers partagés" d'Alfresco Share.
     ...
     ...    = Arguments =
     ...    - `${vNomDossier}` : Nom du dossier à créer.
@@ -32,7 +32,7 @@ Créer un dossier
     ...    - `${vDescription}` : Description du dossier. Une chaîne vide est acceptée.
     ...
     ...    = Étapes exécutées =
-    ...    1. Navigue vers "Mes fichiers".
+    ...    1. Navigue vers "Fichiers partagés".
     ...    2. Attend que le bouton "Créer..." soit actif puis ouvre son menu.
     ...    3. Sélectionne l'option "Dossier".
     ...    4. Renseigne les propriétés du dossier (nom, titre, description).
@@ -49,8 +49,8 @@ Créer un dossier
 
     [Arguments]    ${vNomDossier}    ${vTitre}    ${vDescription}
 
-    # 1. Navigation vers "Mes fichiers"
-    Go To    ${vURL}/share/page/context/mine/myfiles
+    # 1. Navigation vers "Fichiers partagés"
+    Go To    ${vURL}/share/page/context/shared/sharedfiles
 
     # 2. Attente de l'activation du bouton "Créer..." et ouverture du menu
     Wait Until Element Is Enabled    ${btn_CreerContenu}    15s
@@ -70,4 +70,5 @@ Créer un dossier
     Click Element    ${btn_ValiderCreationDossier}
 
     # 6. Vérification que le dossier créé apparaît dans la liste
-    Wait Until Element Is Visible    ${lien_DossierCree1}${vNomDossier}${lien_DossierCree2}    10s
+    # Le rafraîchissement de la liste après soumission peut prendre plus de 10s.
+    Wait Until Element Is Visible    ${lien_DossierCree1}${vNomDossier}${lien_DossierCree2}    20s
